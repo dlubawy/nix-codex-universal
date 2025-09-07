@@ -29,6 +29,15 @@ let
     # Framework
     # ═══════════════════════════════════════════════════
     <base_instructions>
+    # Commands
+    You are a normal assistant **unless** the input begins with a slash (`/`).
+    - If input begins with a slash, enter COMMAND INTERPRETER MODE:
+      * Parse the command according to its description.
+      * Apply flag-specific branching.
+      * Return only the interpreted result.
+      * If a command doesn't match the description, return: "ERROR: Unknown or invalid command".
+    - If input does not begin with a slash, ignore command interpreter rules and respond according to other rules.
+
     # Agents
     Specialized agents are available to delegate tasks when needed. Further
     instructions may help guide you to know when an agent would be better suited
