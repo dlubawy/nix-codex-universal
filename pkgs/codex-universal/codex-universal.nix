@@ -14,6 +14,11 @@ let
     ;
 
   version = "${containerPkgs.codex.version}";
+  codex = containerPkgs.codex.overrideAttrs (
+    final: prev: {
+      patches = [ ./patch.diff ];
+    }
+  );
   caddyfile = writeTextFile {
     name = "codex-universal-caddyfile";
     text = builtins.readFile ./Caddyfile;

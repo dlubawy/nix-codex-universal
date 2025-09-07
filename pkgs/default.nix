@@ -16,11 +16,6 @@ let
           );
         };
         openai-responses = openaiResponses;
-        codex-test = (import inputs.nixpkgs-unstable { system = "aarch64-darwin"; }).codex.overrideAttrs (
-          final: prev: {
-            patches = [ ./patch.diff ];
-          }
-        );
       };
     x86_64-darwin =
       pkgs:
