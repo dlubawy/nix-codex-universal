@@ -1,8 +1,8 @@
-# /sc:business-panel - Business Panel Analysis System
+# /business-panel - Business Panel Analysis System
 
 ```yaml
 ---
-command: "/sc:business-panel"
+command: "/business-panel"
 category: "Analysis & Strategic Planning"
 purpose: "Multi-expert business analysis with adaptive interaction modes"
 wave-enabled: true
@@ -47,16 +47,16 @@ Question-driven exploration for deep learning and strategic thinking development
 ### Basic Usage
 
 ```bash
-/sc:business-panel [document_path_or_content]
+/business-panel [document_path_or_content]
 ```
 
 ### Advanced Options
 
 ```bash
-/sc:business-panel [content] --experts "porter,christensen,meadows"
-/sc:business-panel [content] --mode debate
-/sc:business-panel [content] --focus "competitive-analysis"
-/sc:business-panel [content] --synthesis-only
+/business-panel [content] --experts "porter,christensen,meadows"
+/business-panel [content] --mode debate
+/business-panel [content] --focus "competitive-analysis"
+/business-panel [content] --synthesis-only
 ```
 
 ### Mode Commands

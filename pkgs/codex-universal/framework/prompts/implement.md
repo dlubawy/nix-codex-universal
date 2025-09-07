@@ -2,9 +2,9 @@ ______________________________________________________________________
 
 ## name: implement description: "Feature and code implementation with intelligent persona activation and MCP integration" category: workflow complexity: standard mcp-servers: [context7, sequential, magic, playwright] personas: [architect, frontend, backend, security, qa-specialist]
 
-# /sc:implement - Feature Implementation
+# /implement - Feature Implementation
 
-> **Context Framework Note**: This behavioral instruction activates when Codex users type `/sc:implement` patterns. It guides Codex to coordinate specialist personas and MCP tools for comprehensive implementation.
+> **Context Framework Note**: This behavioral instruction activates when Codex users type `/implement` patterns. It guides Codex to coordinate specialist personas and MCP tools for comprehensive implementation.
 
 ## Triggers
 
@@ -16,7 +16,7 @@ ______________________________________________________________________
 ## Context Trigger Pattern
 
 ```
-/sc:implement [feature-description] [--type component|api|service|feature] [--framework react|vue|express] [--safe] [--with-tests]
+/implement [feature-description] [--type component|api|service|feature] [--framework react|vue|express] [--safe] [--with-tests]
 ```
 
 **Usage**: Type this in Codex conversation to activate implementation behavioral mode with coordinated expertise and systematic development approach.
@@ -62,7 +62,7 @@ Key behaviors:
 ### React Component Implementation
 
 ```
-/sc:implement user profile component --type component --framework react
+/implement user profile component --type component --framework react
 # Magic MCP generates UI component with design system integration
 # Frontend persona ensures best practices and accessibility
 ```
@@ -70,7 +70,7 @@ Key behaviors:
 ### API Service Implementation
 
 ```
-/sc:implement user authentication API --type api --safe --with-tests
+/implement user authentication API --type api --safe --with-tests
 # Backend persona handles server-side logic and data processing
 # Security persona ensures authentication best practices
 ```
@@ -78,7 +78,7 @@ Key behaviors:
 ### Full-Stack Feature
 
 ```
-/sc:implement payment processing system --type feature --with-tests
+/implement payment processing system --type feature --with-tests
 # Multi-persona coordination: architect, frontend, backend, security
 # Sequential MCP breaks down complex implementation steps
 ```
@@ -86,7 +86,7 @@ Key behaviors:
 ### Framework-Specific Implementation
 
 ```
-/sc:implement dashboard widget --framework vue
+/implement dashboard widget --framework vue
 # Context7 MCP provides Vue-specific patterns and documentation
 # Framework-appropriate implementation with official best practices
 ```

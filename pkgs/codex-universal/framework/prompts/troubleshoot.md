@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: troubleshoot description: "Diagnose and resolve issues in code, builds, deployments, and system behavior" category: utility complexity: basic mcp-servers: [] personas: []
 
-# /sc:troubleshoot - Issue Diagnosis and Resolution
+# /troubleshoot - Issue Diagnosis and Resolution
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:troubleshoot [issue] [--type bug|build|performance|deployment] [--trace] [--fix]
+/troubleshoot [issue] [--type bug|build|performance|deployment] [--trace] [--fix]
 ```
 
 ## Behavioral Flow
@@ -51,7 +51,7 @@ Key behaviors:
 ### Code Bug Investigation
 
 ```
-/sc:troubleshoot "Null pointer exception in user service" --type bug --trace
+/troubleshoot "Null pointer exception in user service" --type bug --trace
 # Systematic analysis of error context and stack traces
 # Identifies root cause and provides targeted fix recommendations
 ```
@@ -59,7 +59,7 @@ Key behaviors:
 ### Build Failure Analysis
 
 ```
-/sc:troubleshoot "TypeScript compilation errors" --type build --fix
+/troubleshoot "TypeScript compilation errors" --type build --fix
 # Analyzes build logs and TypeScript configuration
 # Automatically applies safe fixes for common compilation issues
 ```
@@ -67,7 +67,7 @@ Key behaviors:
 ### Performance Issue Diagnosis
 
 ```
-/sc:troubleshoot "API response times degraded" --type performance
+/troubleshoot "API response times degraded" --type performance
 # Performance metrics analysis and bottleneck identification
 # Provides optimization recommendations and monitoring guidance
 ```
@@ -75,7 +75,7 @@ Key behaviors:
 ### Deployment Problem Resolution
 
 ```
-/sc:troubleshoot "Service not starting in production" --type deployment --trace
+/troubleshoot "Service not starting in production" --type deployment --trace
 # Environment and configuration analysis
 # Systematic verification of deployment requirements and dependencies
 ```

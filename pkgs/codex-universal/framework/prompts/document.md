@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: document description: "Generate focused documentation for components, functions, APIs, and features" category: utility complexity: basic mcp-servers: [] personas: []
 
-# /sc:document - Focused Documentation Generation
+# /document - Focused Documentation Generation
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:document [target] [--type inline|external|api|guide] [--style brief|detailed]
+/document [target] [--type inline|external|api|guide] [--style brief|detailed]
 ```
 
 ## Behavioral Flow
@@ -51,7 +51,7 @@ Key behaviors:
 ### Inline Code Documentation
 
 ```
-/sc:document src/auth/login.js --type inline
+/document src/auth/login.js --type inline
 # Generates JSDoc comments with parameter and return descriptions
 # Adds comprehensive inline documentation for functions and classes
 ```
@@ -59,7 +59,7 @@ Key behaviors:
 ### API Reference Generation
 
 ```
-/sc:document src/api --type api --style detailed
+/document src/api --type api --style detailed
 # Creates comprehensive API documentation with endpoints and schemas
 # Generates usage examples and integration guidelines
 ```
@@ -67,7 +67,7 @@ Key behaviors:
 ### User Guide Creation
 
 ```
-/sc:document payment-module --type guide --style brief
+/document payment-module --type guide --style brief
 # Creates user-focused documentation with practical examples
 # Focuses on implementation patterns and common use cases
 ```
@@ -75,7 +75,7 @@ Key behaviors:
 ### Component Documentation
 
 ```
-/sc:document components/ --type external
+/document components/ --type external
 # Generates external documentation files for component library
 # Includes props, usage examples, and integration patterns
 ```

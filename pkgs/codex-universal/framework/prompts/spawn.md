@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: spawn description: "Meta-system task orchestration with intelligent breakdown and delegation" category: special complexity: high mcp-servers: [] personas: []
 
-# /sc:spawn - Meta-System Task Orchestration
+# /spawn - Meta-System Task Orchestration
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:spawn [complex-task] [--strategy sequential|parallel|adaptive] [--depth normal|deep]
+/spawn [complex-task] [--strategy sequential|parallel|adaptive] [--depth normal|deep]
 ```
 
 ## Behavioral Flow
@@ -57,7 +57,7 @@ Key behaviors:
 ### Complex Feature Implementation
 
 ```
-/sc:spawn "implement user authentication system"
+/spawn "implement user authentication system"
 # Breakdown: Database design → Backend API → Frontend UI → Testing
 # Coordinates across multiple domains with dependency management
 ```
@@ -65,7 +65,7 @@ Key behaviors:
 ### Large-Scale System Operation
 
 ```
-/sc:spawn "migrate legacy monolith to microservices" --strategy adaptive --depth deep
+/spawn "migrate legacy monolith to microservices" --strategy adaptive --depth deep
 # Enterprise-scale operation with sophisticated orchestration
 # Adaptive coordination based on operation characteristics
 ```
@@ -73,7 +73,7 @@ Key behaviors:
 ### Cross-Domain Infrastructure
 
 ```
-/sc:spawn "establish CI/CD pipeline with security scanning"
+/spawn "establish CI/CD pipeline with security scanning"
 # System-wide infrastructure operation spanning DevOps, Security, Quality domains
 # Parallel execution of independent components with validation gates
 ```

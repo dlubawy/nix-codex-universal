@@ -3,7 +3,7 @@ let
   inherit (pkgs) lib symlinkJoin writeTextFile;
   codexHome = "/root/.codex";
   agentFiles = (import ./agents { inherit pkgs codexHome; });
-  commandFiles = (import ./commands { inherit pkgs codexHome; });
+  promptFiles = (import ./prompts { inherit pkgs codexHome; });
   frameworkBase = ''
     # Tool Guidelines
 
@@ -29,40 +29,6 @@ let
     # Framework
     # ═══════════════════════════════════════════════════
     <base_instructions>
-    # Prompt commands
-    When a user enters a command in the form `/sc:<command-name> [arguments]`, do the following:
-
-    1. Locate the corresponding Markdown file `${codexHome}/commands/<command-name>.md` in the command library.
-       - Example: `/sc:analyze src/` → read `${codexHome}/commands/analyze.md`.
-
-    2. To read the file: you MUST use the shell tool with `cat ${codexHome}/commands/<command-name>.md`.
-       - Do NOT attempt to fetch files using browser or web tools.
-       - The ONLY valid way to retrieve these files is with the shell tool.
-
-    3. Once the file is retrieved, read its entire contents and use it as the authoritative specification for how you must respond.
-       - Follow the "Behavioral Flow," "Key Patterns," "Boundaries," and other defined sections.
-       - Do not invent behavior outside the specification.
-
-    4. When performing analysis tasks defined in the `.md` file:
-       - You are authorized to use the shell tool to run real commands such as `ls`, `find`, `wc`, `grep`, or `cat` to perform the required task.
-       - Use these commands to gather real data (file counts, line counts, pattern matches, etc.).
-       - Base all findings and metrics on actual file contents.
-       - Do NOT simulate or invent results.
-
-    5. Apply the user’s arguments (`[arguments]`) to the usage and examples provided in the file.
-       - Interpret flags, options, and targets exactly as documented.
-
-    6. Generate outputs based on real data + the guidance in the `.md` file.
-       - Summarize findings, provide severity ratings, or make recommendations, but always ground them in the data you collected.
-
-    If a command is not defined in the library, reply with an error message:
-    "Error: Command <command-name> not found in library."
-
-    ## Available commands
-    ${lib.strings.concatMapStringsSep "\n" (
-      file: "- `/sc:${lib.strings.removeSuffix ".md" file.name}`"
-    ) commandFiles}
-
     # Agents
     Specialized agents are available to delegate tasks when needed. Further
     instructions may help guide you to know when an agent would be better suited
@@ -139,5 +105,5 @@ symlinkJoin {
     codexInstructions
   ]
   ++ agentFiles
-  ++ commandFiles;
+  ++ promptFiles;
 }

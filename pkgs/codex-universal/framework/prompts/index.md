@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: index description: "Generate comprehensive project documentation and knowledge base with intelligent organization" category: special complexity: standard mcp-servers: [sequential, context7] personas: [architect, scribe, quality]
 
-# /sc:index - Project Documentation
+# /index - Project Documentation
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:index [target] [--type docs|api|structure|readme] [--format md|json|yaml]
+/index [target] [--type docs|api|structure|readme] [--format md|json|yaml]
 ```
 
 ## Behavioral Flow
@@ -57,7 +57,7 @@ Key behaviors:
 ### Project Structure Documentation
 
 ```
-/sc:index project-root --type structure --format md
+/index project-root --type structure --format md
 # Comprehensive project structure documentation with intelligent organization
 # Creates navigable structure with cross-references and component relationships
 ```
@@ -65,7 +65,7 @@ Key behaviors:
 ### API Documentation Generation
 
 ```
-/sc:index src/api --type api --format json
+/index src/api --type api --format json
 # API documentation with systematic analysis and validation
 # Scribe and quality personas ensure completeness and accuracy
 ```
@@ -73,7 +73,7 @@ Key behaviors:
 ### Knowledge Base Creation
 
 ```
-/sc:index . --type docs
+/index . --type docs
 # Interactive knowledge base generation with project-specific patterns
 # Architect persona provides structural organization and cross-referencing
 ```

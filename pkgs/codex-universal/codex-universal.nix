@@ -253,12 +253,12 @@ in
 
       mkdir -p "$codexHome"
       mkdir -p "$codexHome/agents"
-      mkdir -p "$codexHome/commands"
+      mkdir -p "$codexHome/prompts"
       set +o errexit
       cp -f "${codexFramework}/root/.codex/framework-instructions.md" "$codexHome/framework-instructions.md"
       cp -f "${codexFramework}/root/.codex/config.toml" "$codexHome/config.toml"
       cp -f ${codexFramework}/root/.codex/agents/* "$codexHome/agents"
-      cp -f ${codexFramework}/root/.codex/commands/* "$codexHome/commands"
+      cp -f ${codexFramework}/root/.codex/prompts/* "$codexHome/prompts"
       set -o errexit
 
       printf "Starting container...\n"

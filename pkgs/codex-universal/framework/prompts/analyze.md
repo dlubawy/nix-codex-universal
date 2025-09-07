@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: analyze description: "Comprehensive code analysis across quality, security, performance, and architecture domains" category: utility complexity: basic mcp-servers: [] personas: []
 
-# /sc:analyze - Code Analysis and Quality Assessment
+# /analyze - Code Analysis and Quality Assessment
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:analyze [target] [--focus quality|security|performance|architecture] [--depth quick|deep] [--format text|json|report]
+/analyze [target] [--focus quality|security|performance|architecture] [--depth quick|deep] [--format text|json|report]
 ```
 
 ## Behavioral Flow
@@ -52,7 +52,7 @@ Key behaviors:
 ### Comprehensive Project Analysis
 
 ```
-/sc:analyze
+/analyze
 # Multi-domain analysis of entire project
 # Generates comprehensive report with key findings and roadmap
 ```
@@ -60,7 +60,7 @@ Key behaviors:
 ### Focused Security Assessment
 
 ```
-/sc:analyze src/auth --focus security --depth deep
+/analyze src/auth --focus security --depth deep
 # Deep security analysis of authentication components
 # Vulnerability assessment with detailed remediation guidance
 ```
@@ -68,7 +68,7 @@ Key behaviors:
 ### Performance Optimization Analysis
 
 ```
-/sc:analyze --focus performance --format report
+/analyze --focus performance --format report
 # Performance bottleneck identification
 # Generates HTML report with optimization recommendations
 ```
@@ -76,7 +76,7 @@ Key behaviors:
 ### Quick Quality Check
 
 ```
-/sc:analyze src/components --focus quality --depth quick
+/analyze src/components --focus quality --depth quick
 # Rapid quality assessment of component directory
 # Identifies code smells and maintainability issues
 ```

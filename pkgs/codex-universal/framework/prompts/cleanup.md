@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: cleanup description: "Systematically clean up code, remove dead code, and optimize project structure" category: workflow complexity: standard mcp-servers: [sequential, context7] personas: [architect, quality, security]
 
-# /sc:cleanup - Code and Project Cleanup
+# /cleanup - Code and Project Cleanup
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:cleanup [target] [--type code|imports|files|all] [--safe|--aggressive] [--interactive]
+/cleanup [target] [--type code|imports|files|all] [--safe|--aggressive] [--interactive]
 ```
 
 ## Behavioral Flow
@@ -57,7 +57,7 @@ Key behaviors:
 ### Safe Code Cleanup
 
 ```
-/sc:cleanup src/ --type code --safe
+/cleanup src/ --type code --safe
 # Conservative cleanup with automatic safety validation
 # Removes dead code while preserving all functionality
 ```
@@ -65,7 +65,7 @@ Key behaviors:
 ### Import Optimization
 
 ```
-/sc:cleanup --type imports --preview
+/cleanup --type imports --preview
 # Analyzes and shows unused import cleanup without execution
 # Framework-aware optimization via Context7 patterns
 ```
@@ -73,7 +73,7 @@ Key behaviors:
 ### Comprehensive Project Cleanup
 
 ```
-/sc:cleanup --type all --interactive
+/cleanup --type all --interactive
 # Multi-domain cleanup with user guidance for complex decisions
 # Activates all personas for comprehensive analysis
 ```
@@ -81,7 +81,7 @@ Key behaviors:
 ### Framework-Specific Cleanup
 
 ```
-/sc:cleanup components/ --aggressive
+/cleanup components/ --aggressive
 # Thorough cleanup with Context7 framework patterns
 # Sequential analysis for complex dependency management
 ```

@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: design description: "Design system architecture, APIs, and component interfaces with comprehensive specifications" category: utility complexity: basic mcp-servers: [] personas: []
 
-# /sc:design - System and Component Design
+# /design - System and Component Design
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:design [target] [--type architecture|api|component|database] [--format diagram|spec|code]
+/design [target] [--type architecture|api|component|database] [--format diagram|spec|code]
 ```
 
 ## Behavioral Flow
@@ -51,7 +51,7 @@ Key behaviors:
 ### System Architecture Design
 
 ```
-/sc:design user-management-system --type architecture --format diagram
+/design user-management-system --type architecture --format diagram
 # Creates comprehensive system architecture with component relationships
 # Includes scalability considerations and best practices
 ```
@@ -59,7 +59,7 @@ Key behaviors:
 ### API Specification Design
 
 ```
-/sc:design payment-api --type api --format spec
+/design payment-api --type api --format spec
 # Generates detailed API specification with endpoints and data models
 # Follows RESTful design principles and industry standards
 ```
@@ -67,7 +67,7 @@ Key behaviors:
 ### Component Interface Design
 
 ```
-/sc:design notification-service --type component --format code
+/design notification-service --type component --format code
 # Designs component interfaces with clear contracts and dependencies
 # Provides implementation guidance and integration patterns
 ```
@@ -75,7 +75,7 @@ Key behaviors:
 ### Database Schema Design
 
 ```
-/sc:design e-commerce-db --type database --format diagram
+/design e-commerce-db --type database --format diagram
 # Creates database schema with entity relationships and constraints
 # Includes normalization and performance considerations
 ```
@@ -90,6 +90,6 @@ Key behaviors:
 
 **Will Not:**
 
-- Generate actual implementation code (use /sc:implement for implementation)
+- Generate actual implementation code (use /implement for implementation)
 - Modify existing system architecture without explicit design approval
 - Create designs that violate established architectural constraints

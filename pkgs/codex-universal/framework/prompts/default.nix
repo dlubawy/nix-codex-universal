@@ -1,7 +1,7 @@
 { pkgs, codexHome, ... }:
 let
   inherit (pkgs) lib writeTextFile;
-  commands = [
+  prompts = [
     ./analyze.md
     ./brainstorm.md
     ./build.md
@@ -27,10 +27,10 @@ let
     ./workflow.md
   ];
 in
-(lib.lists.concatMap (command: [
+(lib.lists.concatMap (prompt: [
   (writeTextFile rec {
-    name = builtins.baseNameOf command;
-    text = builtins.readFile command;
-    destination = "${codexHome}/commands/${name}";
+    name = builtins.baseNameOf prompt;
+    text = builtins.readFile prompt;
+    destination = "${codexHome}/prompts/${name}";
   })
-]) commands)
+]) prompts)

@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: workflow description: "Generate structured implementation workflows from PRDs and feature requirements" category: orchestration complexity: advanced mcp-servers: [sequential, context7, magic, playwright, morphllm, serena] personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
 
-# /sc:workflow - Implementation Workflow Generator
+# /workflow - Implementation Workflow Generator
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:workflow [prd-file|feature-description] [--strategy systematic|agile|enterprise] [--depth shallow|normal|deep] [--parallel]
+/workflow [prd-file|feature-description] [--strategy systematic|agile|enterprise] [--depth shallow|normal|deep] [--parallel]
 ```
 
 ## Behavioral Flow
@@ -61,7 +61,7 @@ Key behaviors:
 ### Systematic PRD Workflow
 
 ```
-/sc:workflow CodexDocs/PRD/feature-spec.md --strategy systematic --depth deep
+/workflow CodexDocs/PRD/feature-spec.md --strategy systematic --depth deep
 # Comprehensive PRD analysis with systematic workflow generation
 # Multi-persona coordination for complete implementation strategy
 ```
@@ -69,7 +69,7 @@ Key behaviors:
 ### Agile Feature Workflow
 
 ```
-/sc:workflow "user authentication system" --strategy agile --parallel
+/workflow "user authentication system" --strategy agile --parallel
 # Agile workflow generation with parallel task coordination
 # Context7 and Magic MCP for framework and UI workflow patterns
 ```
@@ -77,7 +77,7 @@ Key behaviors:
 ### Enterprise Implementation Planning
 
 ```
-/sc:workflow enterprise-prd.md --strategy enterprise --validate
+/workflow enterprise-prd.md --strategy enterprise --validate
 # Enterprise-scale workflow with comprehensive validation
 # Security, devops, and architect personas for compliance and scalability
 ```
@@ -85,7 +85,7 @@ Key behaviors:
 ### Cross-Session Workflow Management
 
 ```
-/sc:workflow project-brief.md --depth normal
+/workflow project-brief.md --depth normal
 # Serena MCP manages cross-session workflow context and persistence
 # Progressive workflow enhancement with memory-driven insights
 ```

@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: estimate description: "Provide development estimates for tasks, features, or projects with intelligent analysis" category: special complexity: standard mcp-servers: [sequential, context7] personas: [architect, performance, project-manager]
 
-# /sc:estimate - Development Estimation
+# /estimate - Development Estimation
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:estimate [target] [--type time|effort|complexity] [--unit hours|days|weeks] [--breakdown]
+/estimate [target] [--type time|effort|complexity] [--unit hours|days|weeks] [--breakdown]
 ```
 
 ## Behavioral Flow
@@ -57,7 +57,7 @@ Key behaviors:
 ### Feature Development Estimation
 
 ```
-/sc:estimate "user authentication system" --type time --unit days --breakdown
+/estimate "user authentication system" --type time --unit days --breakdown
 # Systematic analysis: Database design (2 days) + Backend API (3 days) + Frontend UI (2 days) + Testing (1 day)
 # Total: 8 days with 85% confidence interval
 ```
@@ -65,7 +65,7 @@ Key behaviors:
 ### Project Complexity Assessment
 
 ```
-/sc:estimate "migrate monolith to microservices" --type complexity --breakdown
+/estimate "migrate monolith to microservices" --type complexity --breakdown
 # Architecture complexity analysis with risk factors and dependency mapping
 # Multi-persona coordination for comprehensive assessment
 ```
@@ -73,7 +73,7 @@ Key behaviors:
 ### Performance Optimization Effort
 
 ```
-/sc:estimate "optimize application performance" --type effort --unit hours
+/estimate "optimize application performance" --type effort --unit hours
 # Performance persona analysis with benchmark comparisons
 # Effort breakdown by optimization category and expected impact
 ```

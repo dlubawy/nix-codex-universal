@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: task description: "Execute complex tasks with intelligent workflow management and delegation" category: special complexity: advanced mcp-servers: [sequential, context7, magic, playwright, morphllm, serena] personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
 
-# /sc:task - Enhanced Task Management
+# /task - Enhanced Task Management
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:task [action] [target] [--strategy systematic|agile|enterprise] [--parallel] [--delegate]
+/task [action] [target] [--strategy systematic|agile|enterprise] [--parallel] [--delegate]
 ```
 
 ## Behavioral Flow
@@ -60,7 +60,7 @@ Key behaviors:
 ### Complex Feature Development
 
 ```
-/sc:task create "enterprise authentication system" --strategy systematic --parallel
+/task create "enterprise authentication system" --strategy systematic --parallel
 # Comprehensive task breakdown with multi-domain coordination
 # Activates architect, security, backend, frontend personas
 ```
@@ -68,7 +68,7 @@ Key behaviors:
 ### Agile Sprint Coordination
 
 ```
-/sc:task execute "feature backlog" --strategy agile --delegate
+/task execute "feature backlog" --strategy agile --delegate
 # Iterative task execution with intelligent delegation
 # Cross-session persistence for sprint continuity
 ```
@@ -76,7 +76,7 @@ Key behaviors:
 ### Multi-Domain Integration
 
 ```
-/sc:task execute "microservices platform" --strategy enterprise --parallel
+/task execute "microservices platform" --strategy enterprise --parallel
 # Enterprise-scale coordination with compliance validation
 # Parallel execution across multiple technical domains
 ```

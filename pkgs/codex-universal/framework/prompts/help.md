@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: help description: "Provide help on using this framework" category: utility complexity: basic mcp-servers: [] personas: []
 
-# /sc:help - Codex Framework Help
+# /help - Codex Framework Help
 
 ## Triggers
 
@@ -11,7 +11,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:help
+/help
 ```
 
 ## Behavioral Flow
@@ -41,7 +41,7 @@ Key behaviors:
 ### Help
 
 ```
-/sc:help
+/help
 # A summary of information about the Codex framework
 # A summary of available agents and commands along with description
 ```

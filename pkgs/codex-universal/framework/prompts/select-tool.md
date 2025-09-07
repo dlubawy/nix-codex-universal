@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: select-tool description: "Intelligent MCP tool selection based on complexity scoring and operation analysis" category: special complexity: high mcp-servers: [serena, morphllm] personas: []
 
-# /sc:select-tool - Intelligent MCP Tool Selection
+# /select-tool - Intelligent MCP Tool Selection
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:select-tool [operation] [--analyze] [--explain]
+/select-tool [operation] [--analyze] [--explain]
 ```
 
 ## Behavioral Flow
@@ -57,7 +57,7 @@ Key behaviors:
 ### Complex Refactoring Operation
 
 ```
-/sc:select-tool "rename function across 10 files" --analyze
+/select-tool "rename function across 10 files" --analyze
 # Analysis: High complexity (multi-file, symbol operations)
 # Selection: Serena MCP (LSP capabilities, semantic understanding)
 ```
@@ -65,7 +65,7 @@ Key behaviors:
 ### Pattern-Based Bulk apply_patch
 
 ```
-/sc:select-tool "update console.log to logger.info across project" --explain
+/select-tool "update console.log to logger.info across project" --explain
 # Analysis: Pattern-based transformation, speed priority
 # Selection: Morphllm MCP (pattern matching, bulk operations)
 ```
@@ -73,7 +73,7 @@ Key behaviors:
 ### Memory Management Operation
 
 ```
-/sc:select-tool "save project context and discoveries"
+/select-tool "save project context and discoveries"
 # Direct mapping: Memory operations → Serena MCP
 # Rationale: Project context and cross-session persistence
 ```

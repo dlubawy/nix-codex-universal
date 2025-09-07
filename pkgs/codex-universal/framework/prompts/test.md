@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: test description: "Execute tests with coverage analysis and automated quality reporting" category: utility complexity: enhanced mcp-servers: [playwright] personas: [qa-specialist]
 
-# /sc:test - Testing and Quality Assurance
+# /test - Testing and Quality Assurance
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:test [target] [--type unit|integration|e2e|all] [--coverage] [--watch] [--fix]
+/test [target] [--type unit|integration|e2e|all] [--coverage] [--watch] [--fix]
 ```
 
 ## Behavioral Flow
@@ -58,7 +58,7 @@ Key behaviors:
 ### Basic Test Execution
 
 ```
-/sc:test
+/test
 # Discovers and runs all tests with standard configuration
 # Generates pass/fail summary and basic coverage
 ```
@@ -66,14 +66,14 @@ Key behaviors:
 ### Targeted Coverage Analysis
 
 ```
-/sc:test src/components --type unit --coverage
+/test src/components --type unit --coverage
 # Unit tests for specific directory with detailed coverage metrics
 ```
 
 ### Browser Testing
 
 ```
-/sc:test --type e2e
+/test --type e2e
 # Activates Playwright MCP for comprehensive browser testing
 # Cross-browser compatibility and visual validation
 ```
@@ -81,7 +81,7 @@ Key behaviors:
 ### Development Watch Mode
 
 ```
-/sc:test --watch --fix
+/test --watch --fix
 # Continuous testing with automatic simple failure fixes
 # Real-time feedback during development
 ```

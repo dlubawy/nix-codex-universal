@@ -26,8 +26,8 @@ Actionable rules for enhanced Codex framework operation.
 - **Context Retention**: Maintain ≥90% understanding across operations
 - **Evidence-Based**: All claims must be verifiable through testing or documentation
 - **Discovery First**: Complete project-wide analysis before systematic changes
-- **Session Lifecycle**: Initialize with /sc:load, checkpoint regularly, save before end
-- **Session Pattern**: /sc:load → Work → Checkpoint (30min) → /sc:save
+- **Session Lifecycle**: Initialize with /load, checkpoint regularly, save before end
+- **Session Pattern**: /load → Work → Checkpoint (30min) → /save
 - **Checkpoint Triggers**: Task completion, 30-min intervals, risky operations
 
 ✅ **Right**: Plan → plan_update → Execute → Validate

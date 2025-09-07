@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: improve description: "Apply systematic improvements to code quality, performance, and maintainability" category: workflow complexity: standard mcp-servers: [sequential, context7] personas: [architect, performance, quality, security]
 
-# /sc:improve - Code Improvement
+# /improve - Code Improvement
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:improve [target] [--type quality|performance|maintainability|style] [--safe] [--interactive]
+/improve [target] [--type quality|performance|maintainability|style] [--safe] [--interactive]
 ```
 
 ## Behavioral Flow
@@ -57,7 +57,7 @@ Key behaviors:
 ### Code Quality Enhancement
 
 ```
-/sc:improve src/ --type quality --safe
+/improve src/ --type quality --safe
 # Systematic quality analysis with safe refactoring application
 # Improves code structure, reduces technical debt, enhances readability
 ```
@@ -65,7 +65,7 @@ Key behaviors:
 ### Performance Optimization
 
 ```
-/sc:improve api-endpoints --type performance --interactive
+/improve api-endpoints --type performance --interactive
 # Performance persona analyzes bottlenecks and optimization opportunities
 # Interactive guidance for complex performance improvement decisions
 ```
@@ -73,7 +73,7 @@ Key behaviors:
 ### Maintainability Improvements
 
 ```
-/sc:improve legacy-modules --type maintainability --preview
+/improve legacy-modules --type maintainability --preview
 # Architect persona analyzes structure and suggests maintainability improvements
 # Preview mode shows changes before application for review
 ```
@@ -81,7 +81,7 @@ Key behaviors:
 ### Security Hardening
 
 ```
-/sc:improve auth-service --type security --validate
+/improve auth-service --type security --validate
 # Security persona identifies vulnerabilities and applies security patterns
 # Comprehensive validation ensures security improvements are effective
 ```

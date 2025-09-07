@@ -13,7 +13,7 @@ Multi-expert business analysis mode with adaptive interaction strategies and int
 
 ### Mode Activation
 
-- **Primary Trigger**: `/sc:business-panel` command
+- **Primary Trigger**: `/business-panel` command
 - **Auto-Activation**: Business document analysis, strategic planning requests
 - **Context Integration**: Works with all personas and MCP servers
 

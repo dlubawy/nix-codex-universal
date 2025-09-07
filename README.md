@@ -7,9 +7,9 @@ high‑level agents that can be invoked from the terminal.
 
 ## Features
 
-- **Command Library** – A set of `/sc:<command>` utilities that cover
-  everything from code analysis (`/sc:analyze`) to design
-  (`/sc:design`) and testing (`/sc:test`).
+- **Command Library** – A set of `/<command>` utilities that cover
+  everything from code analysis (`/analyze`) to design
+  (`/design`) and testing (`/test`).
 - **Business‑Panel** – A multi‑expert business analysis mode that
   brings together thought leaders such as Porter, Christensen, and
   Meadows to provide strategic insights.
@@ -42,10 +42,10 @@ nix shell .
 codex-start --help
 
 # Example: Analyze a source directory
-codex-start "/sc:analyze src/ --think"
+codex-start "/analyze src/ --think"
 
 # Example: Run a business panel on a strategy document
-codex-start "/sc:business-panel @strategy_doc.pdf"
+codex-start "/business-panel @strategy_doc.pdf"
 ```
 
 ## Project Structure
@@ -61,7 +61,7 @@ nix-codex-universal/
 │   └── codex-universal/
 │       ├── framework/
 │       │   ├── agents/          # Agent definitions (Markdown)
-│       │   ├── commands/        # /sc command definitions (Markdown)
+│       │   ├── commands/        # /<command> definitions (Markdown)
 │       │   ├── config.toml      # Global configuration
 │       │   ├── core/            # Core framework files (rules, flags, etc.)
 │       │   ├── mcp/             # MCP server definitions

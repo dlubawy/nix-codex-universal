@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: reflect description: "Task reflection and validation using Serena MCP analysis capabilities" category: special complexity: standard mcp-servers: [serena] personas: []
 
-# /sc:reflect - Task Reflection and Validation
+# /reflect - Task Reflection and Validation
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:reflect [--type task|session|completion] [--analyze] [--validate]
+/reflect [--type task|session|completion] [--analyze] [--validate]
 ```
 
 ## Behavioral Flow
@@ -59,7 +59,7 @@ Key behaviors:
 ### Task Adherence Reflection
 
 ```
-/sc:reflect --type task --analyze
+/reflect --type task --analyze
 # Validates current approach against project goals
 # Identifies deviations and provides course correction recommendations
 ```
@@ -67,7 +67,7 @@ Key behaviors:
 ### Session Progress Analysis
 
 ```
-/sc:reflect --type session --validate
+/reflect --type session --validate
 # Comprehensive analysis of session work and information gathering
 # Quality assessment and gap identification for project improvement
 ```
@@ -75,7 +75,7 @@ Key behaviors:
 ### Completion Validation
 
 ```
-/sc:reflect --type completion
+/reflect --type completion
 # Evaluates task completion criteria against actual progress
 # Determines readiness for task completion and identifies remaining blockers
 ```

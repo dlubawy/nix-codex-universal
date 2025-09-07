@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: build description: "Build, compile, and package projects with intelligent error handling and optimization" category: utility complexity: enhanced mcp-servers: [playwright] personas: [devops-engineer]
 
-# /sc:build - Project Building and Packaging
+# /build - Project Building and Packaging
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:build [target] [--type dev|prod|test] [--clean] [--optimize] [--verbose]
+/build [target] [--type dev|prod|test] [--clean] [--optimize] [--verbose]
 ```
 
 ## Behavioral Flow
@@ -58,7 +58,7 @@ Key behaviors:
 ### Standard Project Build
 
 ```
-/sc:build
+/build
 # Builds entire project using default configuration
 # Generates artifacts and comprehensive build report
 ```
@@ -66,7 +66,7 @@ Key behaviors:
 ### Production Optimization Build
 
 ```
-/sc:build --type prod --clean --optimize
+/build --type prod --clean --optimize
 # Clean production build with advanced optimizations
 # Minification, tree-shaking, and deployment preparation
 ```
@@ -74,7 +74,7 @@ Key behaviors:
 ### Targeted Component Build
 
 ```
-/sc:build frontend --verbose
+/build frontend --verbose
 # Builds specific project component with detailed output
 # Real-time progress monitoring and diagnostic information
 ```
@@ -82,7 +82,7 @@ Key behaviors:
 ### Development Build with Validation
 
 ```
-/sc:build --type dev --validate
+/build --type dev --validate
 # Development build with Playwright validation
 # UI testing and build verification integration
 ```

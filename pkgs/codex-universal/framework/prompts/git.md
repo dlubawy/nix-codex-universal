@@ -2,7 +2,7 @@ ______________________________________________________________________
 
 ## name: git description: "Git operations with intelligent commit messages and workflow optimization" category: utility complexity: basic mcp-servers: [] personas: []
 
-# /sc:git - Git Operations
+# /git - Git Operations
 
 ## Triggers
 
@@ -14,7 +14,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/sc:git [operation] [args] [--smart-commit] [--interactive]
+/git [operation] [args] [--smart-commit] [--interactive]
 ```
 
 ## Behavioral Flow
@@ -51,7 +51,7 @@ Key behaviors:
 ### Smart Status Analysis
 
 ```
-/sc:git status
+/git status
 # Analyzes repository state with change summary
 # Provides next steps and workflow recommendations
 ```
@@ -59,7 +59,7 @@ Key behaviors:
 ### Intelligent Commit
 
 ```
-/sc:git commit --smart-commit
+/git commit --smart-commit
 # Generates conventional commit message from change analysis
 # Applies best practices and consistent formatting
 ```
@@ -67,7 +67,7 @@ Key behaviors:
 ### Interactive Operations
 
 ```
-/sc:git merge feature-branch --interactive
+/git merge feature-branch --interactive
 # Guided merge with conflict resolution assistance
 ```
 

@@ -7,7 +7,7 @@
 - Symbol operations: rename, extract, move functions/classes
 - Project-wide code navigation and exploration
 - Multi-language projects requiring LSP integration
-- Session lifecycle: `/sc:load`, `/sc:save`, project activation
+- Session lifecycle: `/load`, `/save`, project activation
 - Memory-driven development workflows
 - Large codebase analysis (>50 files, complex architecture)
 
@@ -29,8 +29,8 @@
 ```
 "rename getUserData function everywhere" → Serena (symbol operation with dependency tracking)
 "find all references to this class" → Serena (semantic search and navigation)
-"load my project context" → Serena (/sc:load with project activation)
-"save my current work session" → Serena (/sc:save with memory persistence)
+"load my project context" → Serena (/load with project activation)
+"save my current work session" → Serena (/save with memory persistence)
 "update all console.log to logger" → Morphllm (pattern-based replacement)
 "create a login form" → Magic (UI component generation)
 ```
