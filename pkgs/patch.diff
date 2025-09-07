@@ -1,0 +1,20 @@
+--- a/tui/src/bottom_pane/chat_composer.rs
++++ b/tui/src/bottom_pane/chat_composer.rs
+@@ -433,7 +433,8 @@ impl ChatComposer {
+             } => {
+                 if let Some(sel) = popup.selected_item() {
+                     // Clear textarea so no residual text remains.
+-                    self.textarea.set_text("");
++                    let first_line = self.textarea.text().to_string().clone();
++                    self.textarea.set_text("");
+                     // Capture any needed data from popup before clearing it.
+                     let prompt_content = match sel {
+                         CommandItem::UserPrompt(idx) => {
+@@ -450,6 +450,6 @@ impl ChatComposer {
+                         }
+                         CommandItem::UserPrompt(_) => {
+                             if let Some(contents) = prompt_content {
+-                                return (InputResult::Submitted(contents), true);
++                                return (InputResult::Submitted(format!("{}\n# User arguments\n{}", contents, first_line)), true);
+                             }
+                             return (InputResult::None, true);
