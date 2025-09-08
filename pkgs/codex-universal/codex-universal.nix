@@ -116,7 +116,7 @@ in
       podman
     ];
     runtimeEnv = {
-      OLLAMA_CONTEXT_LENGTH = 128000;
+      OLLAMA_FLASH_ATTENTION = 1;
       OLLAMA_ORIGINS = (
         lib.strings.concatStringsSep "," [
           "http://localhost"
