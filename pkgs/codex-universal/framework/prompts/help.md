@@ -50,7 +50,9 @@ Key behaviors:
 
 **Will:**
 
-- Collect information on the Codex framework
+- Collect information on the Codex framework by searching for information in ~/.codex
+- Summarize available commands in ~/.codex/prompts/
+- Summarize available agents in ~/.codex/agents/
 - Provide a summary on the framework to the user
 
 **Will Not:**

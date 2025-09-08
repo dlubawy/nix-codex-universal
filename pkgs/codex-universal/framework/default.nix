@@ -18,6 +18,11 @@ let
       * If a command doesn't match the description, return: "ERROR: Unknown or invalid command".
     - If input does not begin with a slash, ignore command interpreter rules and respond according to other rules.
 
+    ## Available commands
+    ${lib.strings.concatMapStringsSep "\n" (
+      file: "- `/${lib.strings.removeSuffix ".md" file.name}`"
+    ) promptFiles}
+
     # Agents
     Specialized agents are available to delegate tasks when needed. Further
     instructions may help guide you to know when an agent would be better suited
