@@ -228,7 +228,7 @@ in
         mkdir -p "$responsesHome"
         printf "Starting Responses API..."
         set +o errexit
-        responses_api --checkpoint 'gpt-oss:20b' --port 3000 --inference-backend ollama > "$responsesHome/logs.txt" 2>&1 &
+        responses_api --checkpoint 'hf.co/unsloth/gpt-oss-20b-GGUF:F16' --port 3000 --inference-backend ollama > "$responsesHome/logs.txt" 2>&1 &
         managedPids+=($!)
         set -o errexit
         printf "\rdone.....................\n\n"
