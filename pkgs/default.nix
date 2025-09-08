@@ -12,8 +12,7 @@ let
           inherit pkgs openaiResponses ollama;
           containerPkgs = (
             import inputs.nixpkgs-unstable {
-              localSystem.system = "aarch64-darwin";
-              crossSystem.system = pkgs.pkgsCross.aarch64-multiplatform.stdenv.hostPlatform.config;
+              system = "aarch64-linux";
             }
           );
         };
@@ -30,8 +29,7 @@ let
           inherit pkgs openaiResponses;
           containerPkgs = (
             import inputs.nixpkgs-unstable {
-              localSystem.system = "x86_64-darwin";
-              crossSystem.system = pkgs.pkgsCross.gnu64.stdenv.hostPlatform.config;
+              system = "x86_64-linux";
             }
           );
         };
