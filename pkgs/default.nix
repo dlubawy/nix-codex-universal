@@ -5,10 +5,11 @@ let
       pkgs:
       let
         openaiResponses = inputs.openai-responses.packages.aarch64-darwin.default;
+        ollama = (import inputs.nixpkgs-unstable { system = "aarch64-darwin"; }).ollama;
       in
       {
         default = pkgs.callPackage ./codex-universal {
-          inherit pkgs openaiResponses;
+          inherit pkgs openaiResponses ollama;
           containerPkgs = (
             import inputs.nixpkgs-unstable {
               system = "aarch64-linux";
@@ -16,6 +17,7 @@ let
           );
         };
         openai-responses = openaiResponses;
+        ollama = ollama;
       };
     x86_64-darwin =
       pkgs:

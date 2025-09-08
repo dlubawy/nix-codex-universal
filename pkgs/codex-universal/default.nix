@@ -2,11 +2,20 @@
   pkgs,
   containerPkgs,
   openaiResponses,
+  ollama,
   ...
 }:
 let
   inherit (pkgs) symlinkJoin;
-  inherit (import ./codex-universal.nix { inherit pkgs containerPkgs openaiResponses; })
+  inherit
+    (import ./codex-universal.nix {
+      inherit
+        pkgs
+        containerPkgs
+        openaiResponses
+        ollama
+        ;
+    })
     codex-log
     codex-enter
     codex-start

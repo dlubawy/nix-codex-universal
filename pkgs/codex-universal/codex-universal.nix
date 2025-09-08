@@ -2,6 +2,7 @@
   pkgs,
   containerPkgs,
   openaiResponses,
+  ollama,
   ...
 }:
 let
