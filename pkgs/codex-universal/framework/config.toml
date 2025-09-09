@@ -9,8 +9,7 @@ model_supports_reasoning_summaries = true
 experimental_instructions_file = "/root/.codex/framework-instructions.md"
 
 [tools]
-# Model is too eager to call this for things like file searches
-web_search = false
+web_search = true
 
 [model_providers.gpt-oss-responses]
 name = "gpt-oss-responses"
