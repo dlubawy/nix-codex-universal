@@ -14,9 +14,21 @@ let
     lib
     ;
 
-  version = "${containerPkgs.codex.version}";
+  version = "0.39.0";
   codex = containerPkgs.codex.overrideAttrs (
     final: prev: {
+      inherit version;
+      src = pkgs.fetchFromGitHub {
+        owner = "openai";
+        repo = "codex";
+        rev = "rust-v${final.version}";
+        hash = "sha256-VxfUhPyJRYu6xvrDJRa3BqS/G7gf+J9d+2FbW1Ps4kw=";
+      };
+      cargoDeps = pkgs.rustPlatform.importCargoLock {
+        lockFile = final.src + "/codex-rs/Cargo.lock";
+        allowBuiltinFetchGit = true;
+      };
+      cargoHash = null;
       patches = [ ./patch.diff ];
     }
   );
