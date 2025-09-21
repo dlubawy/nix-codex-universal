@@ -118,11 +118,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1757486000,
-        "narHash": "sha256-cTExr8wxH5zEegD7qk8IIKNwSuO8SV1bqaNuL0bSjN0=",
+        "lastModified": 1758480229,
+        "narHash": "sha256-uyDUuU8OSinPQBuwjYvY37AYGfblLvnBYcKWv6CGQeM=",
         "owner": "dlubawy",
         "repo": "openai-responses",
-        "rev": "abbe9f9aef8f2c7a047645f0e42f93ed46219204",
+        "rev": "32311e5e7d2671dbfce8491832ac574d40ee90b9",
         "type": "github"
       },
       "original": {
