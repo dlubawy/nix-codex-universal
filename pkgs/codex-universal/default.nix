@@ -1,8 +1,9 @@
 {
   pkgs,
   containerPkgs,
-  openaiResponses,
+  openai-responses,
   ollama,
+  spec-kit,
   ...
 }:
 let
@@ -12,7 +13,7 @@ let
       inherit
         pkgs
         containerPkgs
-        openaiResponses
+        openai-responses
         ollama
         ;
     })
@@ -24,9 +25,11 @@ in
 symlinkJoin {
   name = "codex-universal";
   paths = with pkgs; [
+    codex
     codex-log
     codex-enter
     codex-start
+    spec-kit
     ollama
     podman
   ];

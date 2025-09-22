@@ -1,7 +1,7 @@
 {
   pkgs,
   containerPkgs,
-  openaiResponses,
+  openai-responses,
   ollama,
   ...
 }:
@@ -22,7 +22,7 @@ let
         owner = "openai";
         repo = "codex";
         rev = "rust-v${final.version}";
-        hash = lib.fakeHash;
+        hash = "sha256-YyI4quZ1vcwzDx38EzqycnUQDBOg9SfEemR4zdKYYIw=";
       };
       cargoDeps = pkgs.rustPlatform.importCargoLock {
         lockFile = final.src + "/codex-rs/Cargo.lock";
@@ -46,6 +46,7 @@ let
     name = "nixConfig";
     text = ''
       experimental-features = nix-command flakes
+      build-users-group =
     '';
     destination = "/root/.config/nix/nix.conf";
   };
@@ -60,17 +61,15 @@ let
         paths = with containerPkgs; [
           bash
           codex
-          nix
-        ];
-        pathsToLink = [ "/bin" ];
-      })
-      (buildEnv {
-        name = "image-home";
-        paths = [
-          nixConfig
           codexFramework
+          nix
+          nixConfig
         ];
-        pathsToLink = [ "/root" ];
+        pathsToLink = [
+          "/bin"
+          "/share"
+          "/root"
+        ];
       })
     ];
     extraCommands = ''
@@ -93,6 +92,7 @@ let
   };
 in
 {
+  inherit codex;
   codex-log = writeShellApplication {
     name = "codex-log";
     runtimeInputs = with pkgs; [
@@ -124,7 +124,7 @@ in
       gawk
       gnugrep
       ollama
-      openaiResponses
+      openai-responses
       podman
     ];
     runtimeEnv = {
@@ -227,8 +227,18 @@ in
         podmanOpts+=("-v" "$workingDir:/workspace/$(basename "$workingDir")" "-w" "/workspace/$(basename "$workingDir")")
       fi
 
+      # Use .codex for CODEX_HOME if it exists
       if [ -d "$workingDir/.codex" ]; then
+        mkdir -p "$workingDir/.codex/agents"
+        mkdir -p "$workingDir/.codex/prompts"
+
+        # Install Codex config files in .codex
+        set +o errexit
         install -m 644 "${codexFramework}/root/.codex/config.toml" "$workingDir/.codex/config.toml"
+        install -m 644 "${codexFramework}/root/.codex/framework-instructions.md" "$workingDir/.codex/framework-instructions.md"
+        install -m 644 ${codexFramework}/root/.codex/agents/* "$workingDir/.codex/agents"
+        install -m 644 ${codexFramework}/root/.codex/prompts/* "$workingDir/.codex/prompts"
+        set -o errexit
         podmanOpts+=("-e" "CODEX_HOME=/workspace/$(basename "$workingDir")/.codex")
       fi
 
@@ -275,12 +285,13 @@ in
         printf "\rdone.....................\n\n"
       fi
 
+      # Create ~/.codex for saving logs to host machine
       mkdir -p "$codexHome"
       mkdir -p "$codexHome/agents"
       mkdir -p "$codexHome/prompts"
       set +o errexit
-      install -m 644 "${codexFramework}/root/.codex/framework-instructions.md" "$codexHome/framework-instructions.md"
       install -m 644 "${codexFramework}/root/.codex/config.toml" "$codexHome/config.toml"
+      install -m 644 "${codexFramework}/root/.codex/framework-instructions.md" "$codexHome/framework-instructions.md"
       install -m 644 ${codexFramework}/root/.codex/agents/* "$codexHome/agents"
       install -m 644 ${codexFramework}/root/.codex/prompts/* "$codexHome/prompts"
       set -o errexit

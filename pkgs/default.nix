@@ -1,24 +1,24 @@
 system: inputs:
 let
   allPackages = {
-    aarch64-darwin =
-      pkgs:
-      let
-        openaiResponses = inputs.openai-responses.packages.aarch64-darwin.default;
-        ollama = (import inputs.nixpkgs-unstable { system = "aarch64-darwin"; }).ollama;
-      in
-      {
-        default = pkgs.callPackage ./codex-universal {
-          inherit pkgs openaiResponses ollama;
-          containerPkgs = (
-            import inputs.nixpkgs-unstable {
-              system = "aarch64-linux";
-            }
-          );
-        };
-        openai-responses = openaiResponses;
-        ollama = ollama;
+    aarch64-darwin = pkgs: rec {
+      default = pkgs.callPackage ./codex-universal {
+        inherit
+          pkgs
+          openai-responses
+          ollama
+          spec-kit
+          ;
+        containerPkgs = (
+          import inputs.nixpkgs-unstable {
+            system = "aarch64-linux";
+          }
+        );
       };
+      openai-responses = inputs.openai-responses.packages.aarch64-darwin.default;
+      ollama = (import inputs.nixpkgs-unstable { system = "aarch64-darwin"; }).ollama;
+      spec-kit = pkgs.callPackage ./spec-kit { inherit pkgs; };
+    };
     x86_64-darwin =
       pkgs:
       let

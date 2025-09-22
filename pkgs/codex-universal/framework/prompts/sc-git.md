@@ -44,7 +44,6 @@ Key behaviors:
 - **shell**: Git command execution and repository operations
 - **shell("cat")**: Repository state analysis and configuration review
 - **shell("rg")**: Log parsing and status analysis
-- **apply_patch**: Commit message generation and documentation
 
 ## Key Patterns
 
