@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: analyze description: "Comprehensive code analysis across quality, security, performance, and architecture domains" category: utility complexity: basic mcp-servers: [] personas: []
+name: sc-analyze
+description: "Comprehensive code analysis across quality, security, performance, and architecture domains"
+category: utility
+complexity: basic
+mcp-servers: []
+personas: []
 
-# /analyze - Code Analysis and Quality Assessment
+______________________________________________________________________
+
+# /sc-analyze - Code Analysis and Quality Assessment
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/analyze [target] [--focus quality|security|performance|architecture] [--depth quick|deep] [--format text|json|report]
+/sc-analyze [target] [--focus quality|security|performance|architecture] [--depth quick|deep] [--format text|json|report]
 ```
 
 ## Behavioral Flow
@@ -52,7 +59,7 @@ Key behaviors:
 ### Comprehensive Project Analysis
 
 ```
-/analyze
+/sc-analyze
 # Multi-domain analysis of entire project
 # Generates comprehensive report with key findings and roadmap
 ```
@@ -60,7 +67,7 @@ Key behaviors:
 ### Focused Security Assessment
 
 ```
-/analyze src/auth --focus security --depth deep
+/sc-analyze src/auth --focus security --depth deep
 # Deep security analysis of authentication components
 # Vulnerability assessment with detailed remediation guidance
 ```
@@ -68,7 +75,7 @@ Key behaviors:
 ### Performance Optimization Analysis
 
 ```
-/analyze --focus performance --format report
+/sc-analyze --focus performance --format report
 # Performance bottleneck identification
 # Generates HTML report with optimization recommendations
 ```
@@ -76,7 +83,7 @@ Key behaviors:
 ### Quick Quality Check
 
 ```
-/analyze src/components --focus quality --depth quick
+/sc-analyze src/components --focus quality --depth quick
 # Rapid quality assessment of component directory
 # Identifies code smells and maintainability issues
 ```

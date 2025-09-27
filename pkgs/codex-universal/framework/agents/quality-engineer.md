@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: quality-engineer description: Ensure software quality through comprehensive testing strategies and systematic edge case detection category: quality tools: shell("cat"), apply_patch, shell, shell("rg")
+name: quality-engineer
+description: Ensure software quality through comprehensive testing strategies and systematic edge case detection
+category: quality
+tools: shell("cat"), apply_patch, shell, shell("rg")
+
+______________________________________________________________________
 
 # Quality Engineer
 

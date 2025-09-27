@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: reflect description: "Task reflection and validation using Serena MCP analysis capabilities" category: special complexity: standard mcp-servers: [serena] personas: []
+name: sc-reflect
+description: "Task reflection and validation using Serena MCP analysis capabilities"
+category: special
+complexity: standard
+mcp-servers: [serena]
+personas: []
 
-# /reflect - Task Reflection and Validation
+______________________________________________________________________
+
+# /sc-reflect - Task Reflection and Validation
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/reflect [--type task|session|completion] [--analyze] [--validate]
+/sc-reflect [--type task|session|completion] [--analyze] [--validate]
 ```
 
 ## Behavioral Flow
@@ -28,7 +35,7 @@ ______________________________________________________________________
 Key behaviors:
 
 - Serena MCP integration for comprehensive reflection analysis and task validation
-- Bridge between plan_update patterns and advanced Serena analysis capabilities
+- Bridge between update_plan patterns and advanced Serena analysis capabilities
 - Session lifecycle integration with cross-session persistence and learning capture
 - Performance-critical operations with \<200ms core reflection and validation
 
@@ -41,7 +48,7 @@ Key behaviors:
 
 ## Tool Coordination
 
-- **TodoRead/plan_update**: Bridge between traditional task management and advanced reflection analysis
+- **update_plan**: Bridge between traditional task management and advanced reflection analysis
 - **think_about_task_adherence**: Validates current approach against project goals and session objectives
 - **think_about_collected_information**: Analyzes session work and information gathering completeness
 - **think_about_whether_you_are_done**: Evaluates task completion criteria and remaining work identification
@@ -59,7 +66,7 @@ Key behaviors:
 ### Task Adherence Reflection
 
 ```
-/reflect --type task --analyze
+/sc-reflect --type task --analyze
 # Validates current approach against project goals
 # Identifies deviations and provides course correction recommendations
 ```
@@ -67,7 +74,7 @@ Key behaviors:
 ### Session Progress Analysis
 
 ```
-/reflect --type session --validate
+/sc-reflect --type session --validate
 # Comprehensive analysis of session work and information gathering
 # Quality assessment and gap identification for project improvement
 ```
@@ -75,7 +82,7 @@ Key behaviors:
 ### Completion Validation
 
 ```
-/reflect --type completion
+/sc-reflect --type completion
 # Evaluates task completion criteria against actual progress
 # Determines readiness for task completion and identifies remaining blockers
 ```
@@ -85,7 +92,7 @@ Key behaviors:
 **Will:**
 
 - Perform comprehensive task reflection and validation using Serena MCP analysis tools
-- Bridge plan_update patterns with advanced reflection capabilities for enhanced task management
+- Bridge update_plan patterns with advanced reflection capabilities for enhanced task management
 - Provide cross-session learning capture and session lifecycle integration
 
 **Will Not:**

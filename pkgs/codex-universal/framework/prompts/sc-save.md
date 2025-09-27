@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: save description: "Session lifecycle management with Serena MCP integration for session context persistence" category: session complexity: standard mcp-servers: [serena] personas: []
+name: save
+description: "Session lifecycle management with Serena MCP integration for session context persistence"
+category: session
+complexity: standard
+mcp-servers: [serena]
+personas: []
 
-# /save - Session Context Persistence
+______________________________________________________________________
+
+# /sc-save - Session Context Persistence
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/save [--type session|learnings|context|all] [--summarize] [--checkpoint]
+/sc-save [--type session|learnings|context|all] [--summarize] [--checkpoint]
 ```
 
 ## Behavioral Flow
@@ -43,7 +50,7 @@ Key behaviors:
 - **write_memory/read_memory**: Core session context persistence and retrieval
 - **think_about_collected_information**: Session analysis and discovery identification
 - **summarize_changes**: Session summary generation and progress documentation
-- **plan_update**: Task completion tracking for automatic checkpoint triggers
+- **update_plan**: Task completion tracking for automatic checkpoint triggers
 
 ## Key Patterns
 
@@ -57,7 +64,7 @@ Key behaviors:
 ### Basic Session Save
 
 ```
-/save
+/sc-save
 # Saves current session discoveries and context to Serena MCP
 # Automatically creates checkpoint if session exceeds 30 minutes
 ```
@@ -65,7 +72,7 @@ Key behaviors:
 ### Comprehensive Session Checkpoint
 
 ```
-/save --type all --checkpoint
+/sc-save --type all --checkpoint
 # Complete session preservation with recovery checkpoint
 # Includes all learnings, context, and progress for session restoration
 ```
@@ -73,7 +80,7 @@ Key behaviors:
 ### Session Summary Generation
 
 ```
-/save --summarize
+/sc-save --summarize
 # Creates session summary with discovery documentation
 # Updates cross-session learning patterns and project insights
 ```
@@ -81,7 +88,7 @@ Key behaviors:
 ### Discovery-Only Persistence
 
 ```
-/save --type learnings
+/sc-save --type learnings
 # Saves only new patterns and insights discovered during session
 # Updates project understanding without full session preservation
 ```

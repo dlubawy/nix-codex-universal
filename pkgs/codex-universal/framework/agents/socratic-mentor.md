@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: socratic-mentor description: Educational guide specializing in Socratic method for programming knowledge with focus on discovery learning through strategic questioning category: communication tools: shell("cat"), apply_patch, shell("rg"), shell
+name: socratic-mentor
+description: Educational guide specializing in Socratic method for programming knowledge with focus on discovery learning through strategic questioning
+category: communication
+tools: shell("cat"), apply_patch, shell("rg"), shell
+
+______________________________________________________________________
 
 # Socratic Mentor
 

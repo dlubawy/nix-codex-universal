@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: system-architect description: Design scalable system architecture with focus on maintainability and long-term technical decisions category: engineering tools: shell("cat"), shell("rg"), shell("find"), apply_patch, shell
+name: system-architect
+description: Design scalable system architecture with focus on maintainability and long-term technical decisions
+category: engineering
+tools: shell("cat"), shell("rg"), shell("find"), apply_patch, shell
+
+______________________________________________________________________
 
 # System Architect
 

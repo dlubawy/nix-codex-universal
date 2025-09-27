@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: task description: "Execute complex tasks with intelligent workflow management and delegation" category: special complexity: advanced mcp-servers: [sequential, context7, magic, playwright, morphllm, serena] personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
+name: sc-task
+description: "Execute complex tasks with intelligent workflow management and delegation"
+category: special
+complexity: advanced
+mcp-servers: [sequential, context7, playwright, serena]
+personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
 
-# /task - Enhanced Task Management
+______________________________________________________________________
+
+# /sc-task - Enhanced Task Management
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/task [action] [target] [--strategy systematic|agile|enterprise] [--parallel] [--delegate]
+/sc-task [action] [target] [--strategy systematic|agile|enterprise] [--parallel] [--delegate]
 ```
 
 ## Behavioral Flow
@@ -28,7 +35,7 @@ ______________________________________________________________________
 Key behaviors:
 
 - Multi-persona coordination across architect, frontend, backend, security, devops domains
-- Intelligent MCP server routing (Sequential, Context7, Magic, Playwright, Morphllm, Serena)
+- Intelligent MCP server routing (Sequential, Context7, Playwright, Serena)
 - Systematic execution with progressive task enhancement and cross-session persistence
 - Advanced task delegation with hierarchical breakdown and dependency management
 
@@ -36,14 +43,12 @@ Key behaviors:
 
 - **Sequential MCP**: Complex multi-step task analysis and systematic execution planning
 - **Context7 MCP**: Framework-specific patterns and implementation best practices
-- **Magic MCP**: UI/UX task coordination and design system integration
 - **Playwright MCP**: Testing workflow integration and validation automation
-- **Morphllm MCP**: Large-scale task transformation and pattern-based optimization
 - **Serena MCP**: Cross-session task persistence and project memory management
 
 ## Tool Coordination
 
-- **plan_update**: Hierarchical task breakdown and progress tracking across Epic → Story → Task levels
+- **update_plan**: Hierarchical task breakdown and progress tracking across Epic → Story → Task levels
 - **shell("codex exec")**: Advanced delegation for complex multi-agent coordination and sub-task management
 - **shell("cat")/apply_patch**: Task documentation and implementation coordination
 - **sequentialthinking**: Structured reasoning for complex task dependency analysis
@@ -60,7 +65,7 @@ Key behaviors:
 ### Complex Feature Development
 
 ```
-/task create "enterprise authentication system" --strategy systematic --parallel
+/sc-task create "enterprise authentication system" --strategy systematic --parallel
 # Comprehensive task breakdown with multi-domain coordination
 # Activates architect, security, backend, frontend personas
 ```
@@ -68,7 +73,7 @@ Key behaviors:
 ### Agile Sprint Coordination
 
 ```
-/task execute "feature backlog" --strategy agile --delegate
+/sc-task execute "feature backlog" --strategy agile --delegate
 # Iterative task execution with intelligent delegation
 # Cross-session persistence for sprint continuity
 ```
@@ -76,7 +81,7 @@ Key behaviors:
 ### Multi-Domain Integration
 
 ```
-/task execute "microservices platform" --strategy enterprise --parallel
+/sc-task execute "microservices platform" --strategy enterprise --parallel
 # Enterprise-scale coordination with compliance validation
 # Parallel execution across multiple technical domains
 ```

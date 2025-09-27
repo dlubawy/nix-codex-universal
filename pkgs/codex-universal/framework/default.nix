@@ -8,7 +8,7 @@ let
     # ═══════════════════════════════════════════════════
     # Framework
     # ═══════════════════════════════════════════════════
-    <base_instructions>
+    <system_instructions>
     # Commands
     You are a normal assistant **unless** the input begins with a slash (`/`).
     - If input begins with a slash, enter COMMAND INTERPRETER MODE:
@@ -49,7 +49,7 @@ let
     ${lib.strings.concatMapStringsSep "\n" (
       file: "- `@agent-${lib.strings.removeSuffix ".md" file.name}`"
     ) agentFiles}
-    </base_instructions>
+    </system_instructions>
 
   '';
   codexConfig = writeTextFile {
@@ -74,20 +74,20 @@ let
     text = lib.strings.concatLines [
       frameworkBase
       "# ═══════════════════════════════════════════════════"
-      "# Framework components"
+      "# Codex Framework Instructions"
       "# ═══════════════════════════════════════════════════"
-      "# Core"
-      "<core_instructions>"
+      "# MANDATORY"
+      "<mandatory_instructions>"
       (import ./core { inherit pkgs; })
-      "</core_instructions>"
-      "# Modes"
-      "<mode_instructions>"
-      (import ./modes { inherit pkgs; })
-      "</mode_instructions>"
-      "# MCP Servers"
-      "<mcp_instructions>"
+      "</mandatory_instructions>"
+      "# SECONDARY"
+      "<secondary_instructions>"
       (import ./mcp { inherit pkgs; })
-      "</mcp_instructions>"
+      "</secondary_instructions>"
+      "# CRITICAL"
+      "<critical_instructions>"
+      (import ./modes { inherit pkgs; })
+      "</critical_instructions>"
     ];
     destination = "${codexHome}/framework-instructions.md";
   };

@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: spawn description: "Meta-system task orchestration with intelligent breakdown and delegation" category: special complexity: high mcp-servers: [] personas: []
+name: sc-spawn
+description: "Meta-system task orchestration with intelligent breakdown and delegation"
+category: special
+complexity: high
+mcp-servers: []
+personas: []
 
-# /spawn - Meta-System Task Orchestration
+______________________________________________________________________
+
+# /sc-spawn - Meta-System Task Orchestration
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/spawn [complex-task] [--strategy sequential|parallel|adaptive] [--depth normal|deep]
+/sc-spawn [complex-task] [--strategy sequential|parallel|adaptive] [--depth normal|deep]
 ```
 
 ## Behavioral Flow
@@ -40,7 +47,7 @@ Key behaviors:
 
 ## Tool Coordination
 
-- **plan_update**: Hierarchical task breakdown and progress tracking across Epic → Story → Task levels
+- **update_plan**: Hierarchical task breakdown and progress tracking across Epic → Story → Task levels
 - **shell("cat")/shell("rg")/shell("find")**: System analysis and dependency mapping for complex operations
 - **apply_patch**: Coordinated file operations with parallel and sequential execution
 - **shell**: System-level operations coordination with intelligent resource management
@@ -57,7 +64,7 @@ Key behaviors:
 ### Complex Feature Implementation
 
 ```
-/spawn "implement user authentication system"
+/sc-spawn "implement user authentication system"
 # Breakdown: Database design → Backend API → Frontend UI → Testing
 # Coordinates across multiple domains with dependency management
 ```
@@ -65,7 +72,7 @@ Key behaviors:
 ### Large-Scale System Operation
 
 ```
-/spawn "migrate legacy monolith to microservices" --strategy adaptive --depth deep
+/sc-spawn "migrate legacy monolith to microservices" --strategy adaptive --depth deep
 # Enterprise-scale operation with sophisticated orchestration
 # Adaptive coordination based on operation characteristics
 ```
@@ -73,7 +80,7 @@ Key behaviors:
 ### Cross-Domain Infrastructure
 
 ```
-/spawn "establish CI/CD pipeline with security scanning"
+/sc-spawn "establish CI/CD pipeline with security scanning"
 # System-wide infrastructure operation spanning DevOps, Security, Quality domains
 # Parallel execution of independent components with validation gates
 ```

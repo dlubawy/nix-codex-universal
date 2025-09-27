@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: explain description: "Provide clear explanations of code, concepts, and system behavior with educational clarity" category: workflow complexity: standard mcp-servers: [sequential, context7] personas: [educator, architect, security]
+name: sc-explain
+description: "Provide clear explanations of code, concepts, and system behavior with educational clarity"
+category: workflow
+complexity: standard
+mcp-servers: [sequential, context7]
+personas: [educator, architect, security]
 
-# /explain - Code and Concept Explanation
+______________________________________________________________________
+
+# /sc-explain - Code and Concept Explanation
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/explain [target] [--level basic|intermediate|advanced] [--format text|examples|interactive] [--context domain]
+/sc-explain [target] [--level basic|intermediate|advanced] [--format text|examples|interactive] [--context domain]
 ```
 
 ## Behavioral Flow
@@ -41,7 +48,7 @@ Key behaviors:
 ## Tool Coordination
 
 - **shell("cat")/shell("rg")/shell("find")**: Code analysis and pattern identification for explanation content
-- **plan_update**: Progress tracking for complex multi-part explanations
+- **update_plan**: Progress tracking for complex multi-part explanations
 - **shell("codex exec")**: Delegation for comprehensive explanation workflows requiring systematic breakdown
 
 ## Key Patterns
@@ -56,7 +63,7 @@ Key behaviors:
 ### Basic Code Explanation
 
 ```
-/explain authentication.js --level basic
+/sc-explain authentication.js --level basic
 # Clear explanation with practical examples for beginners
 # Educator persona provides learning-optimized structure
 ```
@@ -64,7 +71,7 @@ Key behaviors:
 ### Framework Concept Explanation
 
 ```
-/explain react-hooks --level intermediate --context react
+/sc-explain react-hooks --level intermediate --context react
 # Context7 integration for official React documentation patterns
 # Structured explanation with progressive complexity
 ```
@@ -72,7 +79,7 @@ Key behaviors:
 ### System Architecture Explanation
 
 ```
-/explain microservices-system --level advanced --format interactive
+/sc-explain microservices-system --level advanced --format interactive
 # Architect persona explains system design and patterns
 # Interactive exploration with Sequential analysis breakdown
 ```
@@ -80,7 +87,7 @@ Key behaviors:
 ### Security Concept Explanation
 
 ```
-/explain jwt-authentication --context security --level basic
+/sc-explain jwt-authentication --context security --level basic
 # Security persona explains authentication concepts and best practices
 # Framework-agnostic security principles with practical examples
 ```

@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: refactoring-expert description: Improve code quality and reduce technical debt through systematic refactoring and clean code principles category: quality tools: shell("cat"), apply_patch, shell("rg"), shell
+name: refactoring-expert
+description: Improve code quality and reduce technical debt through systematic refactoring and clean code principles
+category: quality
+tools: shell("cat"), apply_patch, shell("rg"), shell
+
+______________________________________________________________________
 
 # Refactoring Expert
 

@@ -6,7 +6,6 @@ approval_policy = "never"
 sandbox_mode = "danger-full-access"
 disable_response_storage = false
 model_supports_reasoning_summaries = true
-experimental_instructions_file = "/root/.codex/framework-instructions.md"
 hide_agent_reasoning = false
 show_raw_agent_reasoning = true
 

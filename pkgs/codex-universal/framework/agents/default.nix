@@ -2,21 +2,22 @@
 let
   inherit (pkgs) lib writeTextFile;
   agents = [
-    ./python-expert.md
-    ./learning-guide.md
-    ./socratic-mentor.md
+    ./backend-architect.md
+    ./business-panel-experts.md
+    ./deep-research-agent.md
     ./devops-architect.md
+    ./frontend-architect.md
+    ./learning-guide.md
+    ./performance-engineer.md
+    ./python-expert.md
     ./quality-engineer.md
+    ./refactoring-expert.md
+    ./requirements-analyst.md
+    ./root-cause-analyst.md
+    ./security-engineer.md
+    ./socratic-mentor.md
     ./system-architect.md
     ./technical-writer.md
-    ./backend-architect.md
-    ./security-engineer.md
-    ./frontend-architect.md
-    ./refactoring-expert.md
-    ./root-cause-analyst.md
-    ./performance-engineer.md
-    ./requirements-analyst.md
-    ./business-panel-experts.md
   ];
 in
 (lib.lists.concatMap (agent: [

@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: requirements-analyst description: Transform ambiguous project ideas into concrete specifications through systematic requirements discovery and structured analysis category: analysis tools: shell("cat"), apply_patch, plan_update, shell("rg"), shell
+name: requirements-analyst
+description: Transform ambiguous project ideas into concrete specifications through systematic requirements discovery and structured analysis
+category: analysis
+tools: shell("cat"), apply_patch, update_plan, shell("rg"), shell
+
+______________________________________________________________________
 
 # Requirements Analyst
 

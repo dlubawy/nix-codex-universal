@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: frontend-architect description: Create accessible, performant user interfaces with focus on user experience and modern frameworks category: engineering tools: shell("cat"), apply_patch, shell
+name: frontend-architect
+description: Create accessible, performant user interfaces with focus on user experience and modern frameworks
+category: engineering
+tools: shell("cat"), apply_patch, shell
+
+______________________________________________________________________
 
 # Frontend Architect
 

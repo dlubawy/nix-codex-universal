@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: cleanup description: "Systematically clean up code, remove dead code, and optimize project structure" category: workflow complexity: standard mcp-servers: [sequential, context7] personas: [architect, quality, security]
+name: sc-cleanup
+description: "Systematically clean up code, remove dead code, and optimize project structure"
+category: workflow
+complexity: standard
+mcp-servers: [sequential, context7]
+personas: [architect, quality, security]
 
-# /cleanup - Code and Project Cleanup
+______________________________________________________________________
+
+# /sc-cleanup - Code and Project Cleanup
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/cleanup [target] [--type code|imports|files|all] [--safe|--aggressive] [--interactive]
+/sc-cleanup [target] [--type code|imports|files|all] [--safe|--aggressive] [--interactive]
 ```
 
 ## Behavioral Flow
@@ -42,7 +49,7 @@ Key behaviors:
 
 - **shell("cat")/shell("rg")/shell("find")**: Code analysis and pattern detection for cleanup opportunities
 - **apply_patch**: Safe code modification and structure optimization
-- **plan_update**: Progress tracking for complex multi-file cleanup operations
+- **update_plan**: Progress tracking for complex multi-file cleanup operations
 - **shell("codex exec")**: Delegation for large-scale cleanup workflows requiring systematic coordination
 
 ## Key Patterns
@@ -57,7 +64,7 @@ Key behaviors:
 ### Safe Code Cleanup
 
 ```
-/cleanup src/ --type code --safe
+/sc-cleanup src/ --type code --safe
 # Conservative cleanup with automatic safety validation
 # Removes dead code while preserving all functionality
 ```
@@ -65,7 +72,7 @@ Key behaviors:
 ### Import Optimization
 
 ```
-/cleanup --type imports --preview
+/sc-cleanup --type imports --preview
 # Analyzes and shows unused import cleanup without execution
 # Framework-aware optimization via Context7 patterns
 ```
@@ -73,7 +80,7 @@ Key behaviors:
 ### Comprehensive Project Cleanup
 
 ```
-/cleanup --type all --interactive
+/sc-cleanup --type all --interactive
 # Multi-domain cleanup with user guidance for complex decisions
 # Activates all personas for comprehensive analysis
 ```
@@ -81,7 +88,7 @@ Key behaviors:
 ### Framework-Specific Cleanup
 
 ```
-/cleanup components/ --aggressive
+/sc-cleanup components/ --aggressive
 # Thorough cleanup with Context7 framework patterns
 # Sequential analysis for complex dependency management
 ```

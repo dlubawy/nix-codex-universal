@@ -19,7 +19,7 @@ Actionable rules for enhanced Codex framework operation.
 
 **Priority**: 🟡 **Triggers**: All development tasks
 
-- **Task Pattern**: Understand → Plan (with parallelization analysis) → plan_update(3+ tasks) → Execute → Track → Validate
+- **Task Pattern**: Understand → Plan (with parallelization analysis) → update_plan(3+ tasks) → Execute → Track → Validate
 - **Batch Operations**: ALWAYS parallel tool calls by default, sequential ONLY for dependencies
 - **Validation Gates**: Always validate before execution, verify after completion
 - **Quality Checks**: Run lint/typecheck before marking tasks complete
@@ -30,12 +30,12 @@ Actionable rules for enhanced Codex framework operation.
 - **Session Pattern**: /load → Work → Checkpoint (30min) → /save
 - **Checkpoint Triggers**: Task completion, 30-min intervals, risky operations
 
-✅ **Right**: Plan → plan_update → Execute → Validate
+✅ **Right**: Plan → update_plan → Execute → Validate
 ❌ **Wrong**: Jump directly to implementation without planning
 
 ## Planning Efficiency
 
-**Priority**: 🔴 **Triggers**: All planning phases, plan_update operations, multi-step tasks
+**Priority**: 🔴 **Triggers**: All planning phases, update_plan operations, multi-step tasks
 
 - **Parallelization Analysis**: During planning, explicitly identify operations that can run concurrently
 - **Tool Optimization Planning**: Plan for optimal MCP server combinations and batch operations
@@ -163,7 +163,7 @@ Actionable rules for enhanced Codex framework operation.
 - **Best Tool Selection**: Always use the most powerful tool for each task (MCP > Native > Basic)
 - **Parallel Everything**: Execute independent operations in parallel, never sequentially
 - **Agent Delegation**: Use shell("codex exec --profile {agent}") for complex multi-step operations (>3 steps)
-- **MCP Server Usage**: Leverage specialized MCP servers for their strengths (morphllm for bulk edits, sequential-thinking for analysis)
+- **MCP Server Usage**: Leverage specialized MCP servers for their strengths (sequential-thinking for analysis)
 - **Batch Operations**: Batch shell("cat") calls, group operations
 - **Powerful Search**: Use shell("rg") tool over bash grep, shell("find") over find, specialized search tools
 - **Efficiency First**: Choose speed and power over familiarity - use the fastest method available
@@ -177,7 +177,7 @@ Actionable rules for enhanced Codex framework operation.
 **Priority**: 🟡 **Triggers**: File creation, project structuring, documentation
 
 - **Think Before Write**: Always consider WHERE to place files before creating them
-- **Codex-Specific Documentation**: Put reports, analyses, summaries in `codexdocs/` directory
+- **Codex-Specific Documentation**: Put reports, analyses, summaries in `.codex/docs/` directory
 - **Test Organization**: Place all tests in `tests/`, `__tests__/`, or `test/` directories
 - **Script Organization**: Place utility scripts in `scripts/`, `tools/`, or `bin/` directories
 - **Check Existing Patterns**: Look for existing test/script directories before creating new ones
@@ -186,7 +186,7 @@ Actionable rules for enhanced Codex framework operation.
 - **Separation of Concerns**: Keep tests, scripts, docs, and source code properly separated
 - **Purpose-Based Organization**: Organize files by their intended function and audience
 
-✅ **Right**: `tests/auth.test.js`, `scripts/deploy.sh`, `codexdocs/analysis.md`
+✅ **Right**: `tests/auth.test.js`, `scripts/deploy.sh`, `.codex/docs/analysis.md`
 ❌ **Wrong**: `auth.test.js` next to `auth.js`, `debug.sh` in project root
 
 ## Safety Rules
@@ -233,7 +233,7 @@ File operation needed?
 ```
 New feature request?
 ├─ Scope clear? → No → Brainstorm mode first
-├─ >3 steps? → Yes → plan_update required
+├─ >3 steps? → Yes → update_plan required
 ├─ Patterns exist? → Yes → Follow exactly
 ├─ Tests available? → Yes → Run before starting
 └─ Framework deps? → Check package.json first
@@ -245,7 +245,6 @@ New feature request?
 Task type → Best tool:
 ├─ Complex analysis → shell("codex exec --profile <agent>") > native reasoning
 ├─ Code search → shell("rg") > bash grep
-├─ UI components → Magic MCP > manual coding
 ├─ Documentation → Context7 MCP > web search
 └─ Browser testing → Playwright MCP > unit tests
 ```
@@ -262,7 +261,7 @@ Task type → Best tool:
 
 #### 🟡 IMPORTANT (Strong Preference)
 
-- plan_update for >3 step tasks
+- update_plan for >3 step tasks
 - Complete all started implementations
 - Build only what's asked (MVP first)
 - Professional language (no marketing superlatives)

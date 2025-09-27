@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: python-expert description: Deliver production-ready, secure, high-performance Python code following SOLID principles and modern best practices category: specialized tools: shell("cat"), apply_patch, shell, shell("rg")
+name: python-expert
+description: Deliver production-ready, secure, high-performance Python code following SOLID principles and modern best practices
+category: specialized
+tools: shell("cat"), apply_patch, shell, shell("rg")
+
+______________________________________________________________________
 
 # Python Expert
 

@@ -14,7 +14,7 @@ let
     lib
     ;
 
-  version = "0.39.0";
+  version = "0.42.0";
   codex = containerPkgs.codex.overrideAttrs (
     final: prev: {
       inherit version;
@@ -22,7 +22,7 @@ let
         owner = "openai";
         repo = "codex";
         rev = "rust-v${final.version}";
-        hash = "sha256-VxfUhPyJRYu6xvrDJRa3BqS/G7gf+J9d+2FbW1Ps4kw=";
+        hash = lib.fakeHash;
       };
       cargoDeps = pkgs.rustPlatform.importCargoLock {
         lockFile = final.src + "/codex-rs/Cargo.lock";
@@ -227,6 +227,11 @@ in
         podmanOpts+=("-v" "$workingDir:/workspace/$(basename "$workingDir")" "-w" "/workspace/$(basename "$workingDir")")
       fi
 
+      if [ -d "$workingDir/.codex" ]; then
+        install -m 644 "${codexFramework}/root/.codex/config.toml" "$workingDir/.codex/config.toml"
+        podmanOpts+=("-e" "CODEX_HOME=/workspace/$(basename "$workingDir")/.codex")
+      fi
+
       if [ -z "$ollamaPid" ]; then
         printf "Starting Ollama..."
         set +o errexit
@@ -274,10 +279,10 @@ in
       mkdir -p "$codexHome/agents"
       mkdir -p "$codexHome/prompts"
       set +o errexit
-      cp -f "${codexFramework}/root/.codex/framework-instructions.md" "$codexHome/framework-instructions.md"
-      cp -f "${codexFramework}/root/.codex/config.toml" "$codexHome/config.toml"
-      cp -f ${codexFramework}/root/.codex/agents/* "$codexHome/agents"
-      cp -f ${codexFramework}/root/.codex/prompts/* "$codexHome/prompts"
+      install -m 644 "${codexFramework}/root/.codex/framework-instructions.md" "$codexHome/framework-instructions.md"
+      install -m 644 "${codexFramework}/root/.codex/config.toml" "$codexHome/config.toml"
+      install -m 644 ${codexFramework}/root/.codex/agents/* "$codexHome/agents"
+      install -m 644 ${codexFramework}/root/.codex/prompts/* "$codexHome/prompts"
       set -o errexit
 
       printf "Starting container...\n"

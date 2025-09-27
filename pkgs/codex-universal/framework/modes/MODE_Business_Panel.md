@@ -327,7 +327,6 @@ strategic_questions:
 
 - **Sequential**: Primary coordination for multi-expert analysis, complex reasoning, debate moderation
 - **Context7**: Business frameworks, management patterns, strategic case studies
-- **Magic**: Business model visualization, strategic diagram generation
 - **Playwright**: Business application testing, user journey validation
 
 ### Wave Mode Integration

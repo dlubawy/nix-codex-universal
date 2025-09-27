@@ -1,8 +1,8 @@
-# /business-panel - Business Panel Analysis System
+# /sc-business-panel - Business Panel Analysis System
 
 ```yaml
 ---
-command: "/business-panel"
+command: "/sc-business-panel"
 category: "Analysis & Strategic Planning"
 purpose: "Multi-expert business analysis with adaptive interaction modes"
 wave-enabled: true
@@ -47,16 +47,16 @@ Question-driven exploration for deep learning and strategic thinking development
 ### Basic Usage
 
 ```bash
-/business-panel [document_path_or_content]
+/sc-business-panel [document_path_or_content]
 ```
 
 ### Advanced Options
 
 ```bash
-/business-panel [content] --experts "porter,christensen,meadows"
-/business-panel [content] --mode debate
-/business-panel [content] --focus "competitive-analysis"
-/business-panel [content] --synthesis-only
+/sc-business-panel [content] --experts "porter,christensen,meadows"
+/sc-business-panel [content] --mode debate
+/sc-business-panel [content] --focus "competitive-analysis"
+/sc-business-panel [content] --synthesis-only
 ```
 
 ### Mode Commands
@@ -83,7 +83,7 @@ Question-driven exploration for deep learning and strategic thinking development
 
 - **Auto-Activates**: Analyzer, Architect, Mentor personas
 - **MCP Integration**: Sequential (primary), Context7 (business patterns)
-- **Tool Orchestration**: shell("cat"), shell("rg"), apply_patch, plan_update
+- **Tool Orchestration**: shell("cat"), shell("rg"), apply_patch, update_plan
 
 ## Integration Notes
 

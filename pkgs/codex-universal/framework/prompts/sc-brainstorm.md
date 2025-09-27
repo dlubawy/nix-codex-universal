@@ -1,10 +1,17 @@
 ______________________________________________________________________
 
-## name: brainstorm description: "Interactive requirements discovery through Socratic dialogue and systematic exploration" category: orchestration complexity: advanced mcp-servers: [sequential, context7, magic, playwright, morphllm, serena] personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
+name: sc-brainstorm
+description: "Interactive requirements discovery through Socratic dialogue and systematic exploration"
+category: orchestration
+complexity: advanced
+mcp-servers: [sequential, context7, playwright, serena]
+personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
 
-# /brainstorm - Interactive Requirements Discovery
+______________________________________________________________________
 
-> **Context Framework Note**: This file provides behavioral instructions for Codex when users type `/brainstorm` patterns. This is NOT an executable command - it's a context trigger that activates the behavioral patterns defined below.
+# /sc-brainstorm - Interactive Requirements Discovery
+
+> **Context Framework Note**: This file provides behavioral instructions for Codex when users type `/sc-brainstorm` patterns. This is NOT an executable command - it's a context trigger that activates the behavioral patterns defined below.
 
 ## Triggers
 
@@ -16,7 +23,7 @@ ______________________________________________________________________
 ## Context Trigger Pattern
 
 ```
-/brainstorm [topic/idea] [--strategy systematic|agile|enterprise] [--depth shallow|normal|deep] [--parallel]
+/sc-brainstorm [topic/idea] [--strategy systematic|agile|enterprise] [--depth shallow|normal|deep] [--parallel]
 ```
 
 **Usage**: Type this pattern in your Codex conversation to activate brainstorming behavioral mode with systematic exploration and multi-persona coordination.
@@ -48,7 +55,7 @@ Key behaviors:
 ## Tool Coordination
 
 - **shell("cat")/apply_patch**: Requirements documentation and specification generation
-- **plan_update**: Progress tracking for complex multi-phase exploration
+- **update_plan**: Progress tracking for complex multi-phase exploration
 - **shell("codex exec")**: Advanced delegation for parallel exploration paths and multi-agent coordination
 - **browser.search**: Market research, competitive analysis, and technology validation
 - **sequentialthinking**: Structured reasoning for complex requirements analysis
@@ -65,7 +72,7 @@ Key behaviors:
 ### Systematic Product Discovery
 
 ```
-/brainstorm "AI-powered project management tool" --strategy systematic --depth deep
+/sc-brainstorm "AI-powered project management tool" --strategy systematic --depth deep
 # Multi-persona analysis: architect (system design), analyzer (feasibility), project-manager (requirements)
 # Sequential MCP provides structured exploration framework
 ```
@@ -73,7 +80,7 @@ Key behaviors:
 ### Agile Feature Exploration
 
 ```
-/brainstorm "real-time collaboration features" --strategy agile --parallel
+/sc-brainstorm "real-time collaboration features" --strategy agile --parallel
 # Parallel exploration paths with frontend, backend, and security personas
 # Context7 and Magic MCP for framework and UI pattern analysis
 ```
@@ -81,7 +88,7 @@ Key behaviors:
 ### Enterprise Solution Validation
 
 ```
-/brainstorm "enterprise data analytics platform" --strategy enterprise --validate
+/sc-brainstorm "enterprise data analytics platform" --strategy enterprise --validate
 # Comprehensive validation with security, devops, and architect personas
 # Serena MCP for cross-session persistence and enterprise requirements tracking
 ```
@@ -89,7 +96,7 @@ Key behaviors:
 ### Cross-Session Refinement
 
 ```
-/brainstorm "mobile app monetization strategy" --depth normal
+/sc-brainstorm "mobile app monetization strategy" --depth normal
 # Serena MCP manages cross-session context and iterative refinement
 # Progressive dialogue enhancement with memory-driven insights
 ```

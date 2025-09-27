@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: troubleshoot description: "Diagnose and resolve issues in code, builds, deployments, and system behavior" category: utility complexity: basic mcp-servers: [] personas: []
+name: troubleshoot
+description: "Diagnose and resolve issues in code, builds, deployments, and system behavior"
+category: utility
+complexity: basic
+mcp-servers: []
+personas: []
 
-# /troubleshoot - Issue Diagnosis and Resolution
+______________________________________________________________________
+
+# /sc-troubleshoot - Issue Diagnosis and Resolution
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/troubleshoot [issue] [--type bug|build|performance|deployment] [--trace] [--fix]
+/sc-troubleshoot [issue] [--type bug|build|performance|deployment] [--trace] [--fix]
 ```
 
 ## Behavioral Flow
@@ -51,7 +58,7 @@ Key behaviors:
 ### Code Bug Investigation
 
 ```
-/troubleshoot "Null pointer exception in user service" --type bug --trace
+/sc-troubleshoot "Null pointer exception in user service" --type bug --trace
 # Systematic analysis of error context and stack traces
 # Identifies root cause and provides targeted fix recommendations
 ```
@@ -59,7 +66,7 @@ Key behaviors:
 ### Build Failure Analysis
 
 ```
-/troubleshoot "TypeScript compilation errors" --type build --fix
+/sc-troubleshoot "TypeScript compilation errors" --type build --fix
 # Analyzes build logs and TypeScript configuration
 # Automatically applies safe fixes for common compilation issues
 ```
@@ -67,7 +74,7 @@ Key behaviors:
 ### Performance Issue Diagnosis
 
 ```
-/troubleshoot "API response times degraded" --type performance
+/sc-troubleshoot "API response times degraded" --type performance
 # Performance metrics analysis and bottleneck identification
 # Provides optimization recommendations and monitoring guidance
 ```
@@ -75,7 +82,7 @@ Key behaviors:
 ### Deployment Problem Resolution
 
 ```
-/troubleshoot "Service not starting in production" --type deployment --trace
+/sc-troubleshoot "Service not starting in production" --type deployment --trace
 # Environment and configuration analysis
 # Systematic verification of deployment requirements and dependencies
 ```

@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: load description: "Session lifecycle management with Serena MCP integration for project context loading" category: session complexity: standard mcp-servers: [serena] personas: []
+name: sc-load
+description: "Session lifecycle management with Serena MCP integration for project context loading"
+category: session
+complexity: standard
+mcp-servers: [serena]
+personas: []
 
-# /load - Project Context Loading
+______________________________________________________________________
+
+# /sc-load - Project Context Loading
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/load [target] [--type project|config|deps|checkpoint] [--refresh] [--analyze]
+/sc-load [target] [--type project|config|deps|checkpoint] [--refresh] [--analyze]
 ```
 
 ## Behavioral Flow
@@ -57,7 +64,7 @@ Key behaviors:
 ### Basic Project Loading
 
 ```
-/load
+/sc-load
 # Loads current directory project context with Serena memory integration
 # Establishes session context and prepares for development workflow
 ```
@@ -65,7 +72,7 @@ Key behaviors:
 ### Specific Project Loading
 
 ```
-/load /path/to/project --type project --analyze
+/sc-load /path/to/project --type project --analyze
 # Loads specific project with comprehensive analysis
 # Activates project context and retrieves cross-session memories
 ```
@@ -73,7 +80,7 @@ Key behaviors:
 ### Checkpoint Restoration
 
 ```
-/load --type checkpoint --checkpoint session_123
+/sc-load --type checkpoint --checkpoint session_123
 # Restores specific checkpoint with session context
 # Continues previous work session with full context preservation
 ```
@@ -81,7 +88,7 @@ Key behaviors:
 ### Dependency Context Loading
 
 ```
-/load --type deps --refresh
+/sc-load --type deps --refresh
 # Loads dependency context with fresh analysis
 # Updates project understanding and dependency mapping
 ```

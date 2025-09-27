@@ -1,8 +1,15 @@
 ______________________________________________________________________
 
-## name: workflow description: "Generate structured implementation workflows from PRDs and feature requirements" category: orchestration complexity: advanced mcp-servers: [sequential, context7, magic, playwright, morphllm, serena] personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
+name: sc-workflow
+description: "Generate structured implementation workflows from PRDs and feature requirements"
+category: orchestration
+complexity: advanced
+mcp-servers: [sequential, context7, playwright, serena]
+personas: [architect, analyzer, frontend, backend, security, devops, project-manager]
 
-# /workflow - Implementation Workflow Generator
+______________________________________________________________________
+
+# /sc-workflow - Implementation Workflow Generator
 
 ## Triggers
 
@@ -14,7 +21,7 @@ ______________________________________________________________________
 ## Usage
 
 ```
-/workflow [prd-file|feature-description] [--strategy systematic|agile|enterprise] [--depth shallow|normal|deep] [--parallel]
+/sc-workflow [prd-file|feature-description] [--strategy systematic|agile|enterprise] [--depth shallow|normal|deep] [--parallel]
 ```
 
 ## Behavioral Flow
@@ -36,17 +43,15 @@ Key behaviors:
 
 - **Sequential MCP**: Complex multi-step workflow analysis and systematic implementation planning
 - **Context7 MCP**: Framework-specific workflow patterns and implementation best practices
-- **Magic MCP**: UI/UX workflow generation and design system integration strategies
 - **Playwright MCP**: Testing workflow integration and quality assurance automation
-- **Morphllm MCP**: Large-scale workflow transformation and pattern-based optimization
 - **Serena MCP**: Cross-session workflow persistence, memory management, and project context
 
 ## Tool Coordination
 
 - **shell("cat")/apply_patch**: PRD analysis and workflow documentation generation
-- **plan_update**: Progress tracking for complex multi-phase workflow execution
+- **update_plan**: Progress tracking for complex multi-phase workflow execution
 - **shell("codex exec")**: Advanced delegation for parallel workflow generation and multi-agent coordination
-- **browser.search**: Technology research, framework validation, and implementation strategy analysis
+- **web_browser.web_search**: Technology research, framework validation, and implementation strategy analysis
 - **sequentialthinking**: Structured reasoning for complex workflow dependency analysis
 
 ## Key Patterns
@@ -61,7 +66,7 @@ Key behaviors:
 ### Systematic PRD Workflow
 
 ```
-/workflow CodexDocs/PRD/feature-spec.md --strategy systematic --depth deep
+/sc-workflow CodexDocs/PRD/feature-spec.md --strategy systematic --depth deep
 # Comprehensive PRD analysis with systematic workflow generation
 # Multi-persona coordination for complete implementation strategy
 ```
@@ -69,7 +74,7 @@ Key behaviors:
 ### Agile Feature Workflow
 
 ```
-/workflow "user authentication system" --strategy agile --parallel
+/sc-workflow "user authentication system" --strategy agile --parallel
 # Agile workflow generation with parallel task coordination
 # Context7 and Magic MCP for framework and UI workflow patterns
 ```
@@ -77,7 +82,7 @@ Key behaviors:
 ### Enterprise Implementation Planning
 
 ```
-/workflow enterprise-prd.md --strategy enterprise --validate
+/sc-workflow enterprise-prd.md --strategy enterprise --validate
 # Enterprise-scale workflow with comprehensive validation
 # Security, devops, and architect personas for compliance and scalability
 ```
@@ -85,7 +90,7 @@ Key behaviors:
 ### Cross-Session Workflow Management
 
 ```
-/workflow project-brief.md --depth normal
+/sc-workflow project-brief.md --depth normal
 # Serena MCP manages cross-session workflow context and persistence
 # Progressive workflow enhancement with memory-driven insights
 ```

@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: root-cause-analyst description: Systematically investigate complex problems to identify underlying causes through evidence-based analysis and hypothesis testing category: analysis tools: shell("cat"), shell("rg"), shell("find"), shell, apply_patch
+name: root-cause-analyst
+description: Systematically investigate complex problems to identify underlying causes through evidence-based analysis and hypothesis testing
+category: analysis
+tools: shell("cat"), shell("rg"), shell("find"), shell, apply_patch
+
+______________________________________________________________________
 
 # Root Cause Analyst
 

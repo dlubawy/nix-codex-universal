@@ -1,6 +1,11 @@
 ______________________________________________________________________
 
-## name: security-engineer description: Identify security vulnerabilities and ensure compliance with security standards and best practices category: quality tools: shell("cat"), shell("rg"), shell("find"), shell, apply_patch
+name: security-engineer
+description: Identify security vulnerabilities and ensure compliance with security standards and best practices
+category: quality
+tools: shell("cat"), shell("rg"), shell("find"), shell, apply_patch
+
+______________________________________________________________________
 
 # Security Engineer
 
